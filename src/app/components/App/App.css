@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+  min-width: 1024px;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slide-arrow {
+	color: $theme-blue;
+	cursor: pointer;
+	font-size: 2rem;
+	position: fixed;
+	top: 50%;
+}
+
+.slide-arrow.right {
+	right: 1rem;
+}
+
+.slide-arrow.left {
+	left: 1rem;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 300px;
+}
+
+.slide {
+  margin: auto;
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .carousel {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+    flex-flow: row wrap;
+  }
+}
+
+.video {
+  object-fit: fill;
+  width: 100vw;
+  height: 100vh;
+}
