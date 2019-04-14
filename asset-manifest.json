@@ -1,13 +1,13 @@
 {
   "main.css": "/react-vod-app/static/css/main.a4d0989a.chunk.css",
-  "main.js": "/react-vod-app/static/js/main.599261ea.chunk.js",
-  "main.js.map": "/react-vod-app/static/js/main.599261ea.chunk.js.map",
+  "main.js": "/react-vod-app/static/js/main.c36c2267.chunk.js",
+  "main.js.map": "/react-vod-app/static/js/main.c36c2267.chunk.js.map",
   "runtime~main.js": "/react-vod-app/static/js/runtime~main.00b92041.js",
   "runtime~main.js.map": "/react-vod-app/static/js/runtime~main.00b92041.js.map",
   "static/js/2.045d7a79.chunk.js": "/react-vod-app/static/js/2.045d7a79.chunk.js",
   "static/js/2.045d7a79.chunk.js.map": "/react-vod-app/static/js/2.045d7a79.chunk.js.map",
   "index.html": "/react-vod-app/index.html",
-  "precache-manifest.2333d4033dbb695822ea07ea17322503.js": "/react-vod-app/precache-manifest.2333d4033dbb695822ea07ea17322503.js",
+  "precache-manifest.d0ce15dd0b25540b5c96f67acca61cd7.js": "/react-vod-app/precache-manifest.d0ce15dd0b25540b5c96f67acca61cd7.js",
   "service-worker.js": "/react-vod-app/service-worker.js",
   "static/css/main.a4d0989a.chunk.css.map": "/react-vod-app/static/css/main.a4d0989a.chunk.css.map"
 }
