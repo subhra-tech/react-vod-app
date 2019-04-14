@@ -29,12 +29,12 @@ function App({ classes }) {
       <div className={classes.root}>
         <AppBar position="static" color="default" className={classes.appBar}>
           <Toolbar className={classes.toolBar}>
-            <Link to={`${process.env.PUBLIC_URL}/`} className={classes.menuButton}>
+            <Link to='/' className={classes.menuButton}>
              <IconButton>
                <HomeIcon />
              </IconButton>
             </Link>
-            <Link to={`${process.env.PUBLIC_URL}/history/`} className={classes.menuButton}>
+            <Link to='/history/' className={classes.menuButton}>
              <IconButton>
                <HistoryIcon />
              </IconButton>
@@ -42,8 +42,8 @@ function App({ classes }) {
           </Toolbar>
         </AppBar>
 
-        <Route path="/" exact component={Home} />
-        <Route path="/history/" component={History} />
+        <Route path='/' exact component={Home} />
+        <Route path='/history/' component={History} />
       </div>
     </Router>
   );
