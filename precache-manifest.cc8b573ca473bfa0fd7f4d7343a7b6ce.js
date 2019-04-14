@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/react-vod-app/static/css/main.a4d0989a.chunk.css"
   },
   {
-    "revision": "03c9ea767e17ebd51997ce65452802d2",
+    "revision": "4c94da3bf1f8021e5329a6b09b13f4c2",
     "url": "/react-vod-app/index.html"
   }
 ];
