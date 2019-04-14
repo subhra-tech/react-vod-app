@@ -25,7 +25,7 @@ const styles = {
 
 function App({ classes }) {
   return (
-    <Router>
+    <Router basename={`${process.env.PUBLIC_URL}`}>
       <div className={classes.root}>
         <AppBar position="static" color="default" className={classes.appBar}>
           <Toolbar className={classes.toolBar}>
