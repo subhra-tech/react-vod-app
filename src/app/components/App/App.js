@@ -29,12 +29,12 @@ function App({ classes }) {
       <div className={classes.root}>
         <AppBar position="static" color="default" className={classes.appBar}>
           <Toolbar className={classes.toolBar}>
-            <Link to="/" className={classes.menuButton}>
+            <Link to={`${process.env.PUBLIC_URL}/`} className={classes.menuButton}>
              <IconButton>
                <HomeIcon />
              </IconButton>
             </Link>
-            <Link to="/history/" className={classes.menuButton}>
+            <Link to={`${process.env.PUBLIC_URL}/history/`} className={classes.menuButton}>
              <IconButton>
                <HistoryIcon />
              </IconButton>
