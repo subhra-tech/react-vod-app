@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-vod-app/precache-manifest.610d77495974baf1cd13e3d93c9be3bd.js"
+  "/react-vod-app/precache-manifest.3afda43e064f0b4d909e101915da38f6.js"
 );
 
 workbox.clientsClaim();
