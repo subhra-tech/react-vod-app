@@ -31,7 +31,10 @@ const styles = theme => ({
         width: '47%',
         height: 270,
         marginTop: 10
-    }
+      }
+    },
+    imageMargin: {
+      marginLeft: 5
     },
     focusVisible: {},
     imageButton: {
@@ -87,38 +90,42 @@ const styles = theme => ({
     }
   });
 
-const CarouselItem = ({ entry, handleClick, classes }) => {
-    return (
-        <ButtonBase
-            focusRipple
-            key={entry.id}
-            className={classes.image}
-            focusVisibleClassName={classes.focusVisible}
-            onClick={() => handleClick(entry.id)}
-          >
-            <span
-              className={classes.imageSrc}
-              style={{
-                backgroundImage: `url(${entry.images[0].url})`,
-              }}
-            />
-            <span className={classes.imageBackdrop} />
-            <span className={classes.imageButton}>
-              <IconButton color="primary" className={classes.icon} component="span">
-                <PlayButton className={classes.play} />
-              </IconButton>
-              <Typography
-                component="span"
-                variant="subtitle1"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {entry.title}
-                <span className={classes.imageMarked} />
-              </Typography>
-            </span>
-          </ButtonBase>
-    )
+const CarouselItem = ({ entry, handleClick, carouselSize, stepSize, classes }) => {
+  let imageStyle = [classes.image]
+  if (carouselSize < stepSize) {
+    imageStyle.push(classes.imageMargin)
+  }
+  return (
+      <ButtonBase
+          focusRipple
+          key={entry.id}
+          className={imageStyle.join(' ')}
+          focusVisibleClassName={classes.focusVisible}
+          onClick={() => handleClick(entry.id)}
+        >
+          <span
+            className={classes.imageSrc}
+            style={{
+              backgroundImage: `url(${entry.images[0].url})`,
+            }}
+          />
+          <span className={classes.imageBackdrop} />
+          <span className={classes.imageButton}>
+            <IconButton color="primary" className={classes.icon} component="span">
+              <PlayButton className={classes.play} />
+            </IconButton>
+            <Typography
+              component="span"
+              variant="subtitle1"
+              color="inherit"
+              className={classes.imageTitle}
+            >
+              {entry.title}
+              <span className={classes.imageMarked} />
+            </Typography>
+          </span>
+        </ButtonBase>
+  )
 }
 
 export default withStyles(styles)(CarouselItem)

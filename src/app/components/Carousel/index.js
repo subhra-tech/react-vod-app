@@ -12,13 +12,18 @@ const styles = theme => ({
     flexWrap: 'wrap',
     minWidth: 300,
     width: '100%',
-    justifyContent: 'space-evenly',
     '&:focus': {
       outline: 'none'
     },
     [theme.breakpoints.down('sm')]: {
       display: 'none'
     },
+  },
+  fullCarousel: {
+    justifyContent: 'space-evenly'
+  },
+  semiCarousel: {
+    justifyContent: 'center'
   },
   deviceRoot: {
     display: 'none',
@@ -91,15 +96,28 @@ class Carousel extends React.Component {
   render() {
     const { classes, handleClick } = this.props
     const { startIndex, stepSize, displayEntries } = this.state
+    let rootStyle = [classes.root]
+    if (displayEntries.length >= stepSize) {
+      rootStyle.push(classes.fullCarousel)
+    } else {
+      rootStyle.push(classes.semiCarousel)
+    }
     return (
       <>
-        <div className={classes.root} ref={this.carouselRef} tabIndex={0} onKeyDown={this.handleKeyboardEvent}>
+        <div className={rootStyle.join(' ')} ref={this.carouselRef} tabIndex={0} onKeyDown={this.handleKeyboardEvent}>
         {displayEntries.length >= stepSize && 
           <Button size="small" onClick={this.handleBack} >
             <KeyboardArrowLeft className={classes.button} />
           </Button>
         }
-        {displayEntries.slice(startIndex, stepSize).map(entry => <CarouselItem key={entry.id} entry={entry} handleClick={handleClick}/>)}
+        {displayEntries.slice(startIndex, stepSize).map(entry => 
+          <CarouselItem 
+            key={entry.id} 
+            entry={entry} 
+            handleClick={handleClick} 
+            carouselSize={displayEntries.length} 
+            stepSize={stepSize}/>)
+        }
         {displayEntries.length >= stepSize && 
           <Button size={'small'} onClick={this.handleNext}>
             <KeyboardArrowRight className={classes.button}/>
